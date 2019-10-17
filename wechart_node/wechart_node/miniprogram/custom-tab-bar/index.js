@@ -1,0 +1,21 @@
+Component({
+  data:{
+    PageCur:"main"
+  },
+  options:{
+    addGlobalClass:true
+  },
+  methods:{
+    NavChange(e){
+      this.setData({
+        PageCur: e.currentTarget.dataset.cur
+      })
+      wx.switchTab({
+        url:"/pages/"+e.currentTarget.dataset.cur+"/"+e.currentTarget.dataset.cur
+      })
+      this.getTabBar().setData({
+        PageCur:e.currentTarget.dataset.cur
+      })
+    }
+  }
+})

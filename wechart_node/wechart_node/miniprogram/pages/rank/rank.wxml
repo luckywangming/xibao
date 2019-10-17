@@ -1,0 +1,45 @@
+<cu-custom2 class="cutab" bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{false}}">
+  <view slot="backText">返回</view>
+  <!-- <view slot="content">动态设置内容,快速生成喜报...</view> -->
+  <view slot="content">生成喜报、好友度排行...</view>
+</cu-custom2>
+<scroll-view bindscrolltolower="nextPage" scroll-y="{{true}}" style="height:calc(100vh - 220rpx)">
+  <view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg)" bindtap="toChild">
+      <view class="cardTitle rank">排行</view>
+      <view class="sign">保存图片次数及好友值排行</view>
+    </view>
+  </view>
+  <scroll-view scroll-x class="bg-white nav text-center">
+    <view data-type="{{item.type}}" class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{tabArr}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      {{item.txt}}
+    </view>
+  </scroll-view>
+  <!-- <scroll-view scroll-y style="height:800rpx" class="scrollPage"> -->
+  <view class="cu-list menu-avatar">
+    <view wx:for="{{list}}" class="cu-item ">
+      <view class="cu-avatar radius lg" style="background-image:url({{item.avatar}});">
+        <view class="cu-tag badge">{{index + 1}}</view>
+      </view>
+      <view class="content">
+        <view class="text-pink">
+          <text class="text-cut">{{item.name}}</text>
+        </view>
+        <view class="text-orange text-sm flex">
+          <view class="text-cut">
+            下载图片次数
+            <text style="margin-right:5rpx;" class="text-mauve text-bold">{{item.times}}次</text>
+            好友值
+            <text class="text-bold text-mauve">{{item.ping}}°</text>
+          </view>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">最近</view>
+        <view class="cu-tag round sm">🌹 {{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<!-- </scroll-view> -->
+<view class='cu-tabbar-height'></view>

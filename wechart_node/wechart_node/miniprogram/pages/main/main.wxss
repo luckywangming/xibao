@@ -1,0 +1,172 @@
+.cutab{
+  text-align: left;
+}
+.cu-bar .content image{
+  height: 60rpx;
+  width: 240rpx;
+}
+
+.cardTitle{
+  color: #fff;
+  padding: 90rpx 60rpx;
+  font-size: 40rpx;
+  font-weight: 300;
+  transform: skew(-10deg, 0deg);
+  position: relative;
+  text-shadow: 0px 0px 6rpx rgba(0,0,0,0.3)
+}
+
+.cardTitle::before{
+  content: "";
+  position: absolute;
+  width: 60rpx;
+  height: 6rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  display: block;
+  top: 60rpx;
+  left: 50rpx;  
+  transform: skew(10deg, 0deg);
+}
+.cardTitle::after{
+  content: "";
+  position: absolute;
+  width: 140rpx;
+  border-radius: 6rpx;
+  height: 24rpx;
+  background-color: #fff;
+  display: block;
+  bottom: 76rpx;
+  left: 90rpx;  
+  transform: skew(10deg, 0deg);
+  opacity: 0.1;
+}
+
+
+
+.VerticalNav.nav {
+  width: 170rpx;
+  white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #f1f1f1;
+}
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  height: 30rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  right: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+.VerticalBox{
+  display: flex;
+}
+.VerticalMain{
+  background-color: #f1f1f1;
+	width:580rpx;
+}
+.main.cardTitle{
+  padding:90rpx 60rpx 20rpx
+}
+.sign{
+  padding:0 20rpx 40rpx 80rpx;
+  color:#fff;
+  height:120rpx;
+}
+.card-swiper{
+  height:410rpx;
+}
+.tonew{
+  position: relative;
+}
+.to-content{
+  position: absolute;
+  width:100%;
+  height:100%;
+  z-index: 10;
+  top:0;
+  left:0;
+}
+.card-swiper swiper-item{
+  padding:20rpx 0 40rpx;
+  width:750rpx!important;
+  left:0;
+}
+.box .content{
+  padding:10rpx;
+  background-color: #fff;
+  position: relative;
+}
+.img-width{
+	/* height:240px; */
+  width:522rpx;
+  vertical-align: top;
+}
+.aaa{
+  position:relative;
+}
+.h_mm{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0)
+}
+.mask{
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height:100%;
+}
+.h_mask{
+  background-color: rgba(0,0,0,0.9);
+}
+.password{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100%;
+  left:0;
+  background:rgba(0,0,0,0.8);
+  z-index:10000;
+}
+.hei_mask{
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  left:0;
+  z-index: 99;
+}
+.input{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height:40px;
+  line-height:40px;
+  color:#fff;
+  border:1px solid #fff;
+  text-align: center;
+  z-index: 100;
+}

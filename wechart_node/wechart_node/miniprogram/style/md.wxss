@@ -1,0 +1,231 @@
+
+.default-img{
+  /* width:750rpx;
+  position:absolute;
+  top:0;
+  left:0; */
+
+  display: none;
+}
+.img-box {
+  position:relative;
+}
+.geizan{
+  width:636rpx;
+  margin:0 auto;
+  text-align: center;
+  height:30px;
+  font-size:14px;
+  line-height: 30px;
+  border-radius:40px;
+  background-color: #a5673f;
+  color:#fff;
+  margin-bottom:20px;
+  margin-top:10px;
+}
+.edit{
+  position: absolute;
+  z-index: 2;
+  width:720rpx;
+  text-align: center;
+  color:#fff;
+  top:300rpx;
+  left:50%;
+  margin-left:-375rpx;
+  padding-left:30rpx;
+}
+view.title{
+  color:#ffd66c;
+  line-height: 20px;
+  width:100%;
+  opacity:0.8;
+  font-size:14px;
+}
+.title text{
+  display: inline-block;
+  width:60%;
+}
+view.money{
+  font-size:36px;
+  color:#ffcd60;
+  font-weight:bold;
+  margin-top:20rpx;
+  line-height: 36px;
+}
+view.name{
+  font-size:26px;
+  color:#ffcd60;
+}
+view.project{
+  margin-top:30rpx;
+  color:#ffd66c;
+  line-height: 20px;
+  width:100%;
+  opacity:0.8;
+  font-size:14px;
+}
+view.time{
+  position:absolute;
+  top:780rpx;
+  text-align: center;
+  width:720rpx;
+  padding-left:30rpx;
+  z-index: 3;
+  color:#ffd66c;
+  font-size:16px;
+  opacity:0.9;
+}
+.shuru input{
+  border:1px solid #fff;
+  padding:0 5px;
+  color:rgb(1, 12, 3);
+}
+.c-tit1 text{
+  color:#4e92db;
+  text-align: right;
+}
+.c-tit1:after{
+  content:"";
+  height:2rpx;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  /* background-color: #B9C1CA; */
+  transform:translate(-120%);
+  transition:.3s all ease;
+}
+.c-tit1.a,.c-tit1.b,.c-tit1.c,.c-tit1.d,.c-tit1.e,.c-tit1.f{
+  border-bottom-color:#fff;
+}
+.c-tit1.a:after{
+  height:8rpx;
+  transform:translate(0);
+  background-color: #09f;
+}
+.c-tit1.b:after{
+  height:8rpx;
+  transform:translate(0);
+  background-color: rgb(30, 255, 0);
+}
+.c-tit1.c:after{
+  height:8rpx;
+  transform:translate(0);
+  background-color: rgb(255, 174, 0);
+}
+.c-tit1.d:after{
+  height:8rpx;
+  transform:translate(0);
+  background-color: rgb(255, 0, 76);
+}
+.c-tit1.e:after{
+  height:8rpx;
+  transform:translate(0);
+  background-color: rgb(0, 217, 255);
+}
+.c-tit1.f:after{
+  height:8rpx;
+  transform:translate(0);
+  background-color: rgb(229, 255, 0);
+}
+.c-tit1{
+  align-items: center;
+  display: flex;
+  height:40px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom:20px;
+  border-bottom:1px solid #eee;
+}
+.project-change{
+  margin-left:20rpx;
+}
+.banquan{
+  color:#ccc;
+  font-size:12px;
+  text-align: center;
+}
+.btm-btn{
+  display:flex;
+  justify-content: center;
+}
+.btm-btn button{
+  width:40%;
+}
+
+.ca{
+  position: relative;
+}
+.dragdiv{
+  position:absolute;
+  border:1px dashed #09f;
+}
+.shebei{
+  color:rgb(212, 146, 146);
+  font-size:12px;
+  display: flex;
+  margin-bottom:10px;
+  padding-bottom:5rpx;
+  border-bottom:1rpx solid #f5f5f5;
+  justify-content: flex-start;
+}
+.wf{
+  margin-right:50rpx;
+}
+.wf.ff{
+  min-width:148rpx;
+}
+.tld{
+  color:#ccc;
+  font-size:12px;
+}
+.yyy{
+  font-size:12px;
+  color:#ccc;
+}
+.fn{
+  color:#ccc;
+  font-size:12px;
+}
+.shouquan{
+  display: flex;
+  justify-content: center;
+}
+.shouquan text{
+  font-size:16px;
+  flex:1;
+  text-align: center;
+  margin-bottom:20px;
+}
+.shouquan button{
+  color:#fff;
+  font-size:12px;
+}
+.c-txsz{
+  overflow: inherit;
+}
+.c-txsz .txSign{
+  position: absolute;
+  font-size:12px;
+  bottom:-20px;
+  left:0;
+  width:600rpx;
+  color:#ccc;
+}
+
+.c-txsz .txSign.w{
+  bottom:0;
+  top:-20px;
+  left:0;
+  right:20px;
+  width:100px;
+}
+.txzs{
+  width:40px;
+  height:40px;
+  margin-bottom:10rpx;
+}
+.project-change-tx{
+  width:100px;
+  margin-right:10px;
+}

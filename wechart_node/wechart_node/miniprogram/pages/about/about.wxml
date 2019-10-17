@@ -1,0 +1,58 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="/images/xibaoshare.png" class="png" mode="widthFix"></image>
+    <view class="text-xl">生成喜报
+      <text class="text-df">v2.01</text>
+    </view>
+    <view class="margin-top-sm">
+      <text>By:大明的小确幸</text>
+    </view>
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{visitTotal}}+</view>
+      <view class="margin-top-sm">
+        <text class="icon-attentionfill"></text> 访问</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{starCount}}+</view>
+      <view class="margin-top-sm">
+        <text class="icon-favorfill"></text> 生成喜报</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">{{forksCount}}+</view>
+      <view class="margin-top-sm">
+        <text class="icon-fork"></text> 定制</view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="cantact">
+        <text class="icon-message text-red"></text>
+        <text class="text-grey">联系作者</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content">
+        <navigator 
+          style="width:100%;background:#fff;text-align:left"
+          open-type="navigate" 
+          target="miniProgram"
+          app-id="wx18a2ac992306a5a4" 
+          version="release"
+          path="pages/apps/largess/detail?id=SJMKpnQsUvY%3D" class="content">
+          <text class="icon-appreciatefill text-red"></text>
+          <text class="text-grey">赞赏支持</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="icon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

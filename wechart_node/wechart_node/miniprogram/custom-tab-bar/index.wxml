@@ -1,0 +1,20 @@
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view  bindtap="NavChange" class="action" data-cur="main">
+    <view class='icon-cu-image'>
+      <image src="/images/tabbar/basics{{PageCur=='main'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='main'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view bindtap="NavChange" class="action" data-cur="rank">
+    <view class='icon-cu-image'>
+      <image src="/images/tabbar/component{{PageCur=='rank'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='rank'?'text-green':'text-gray'}}">排行</view>
+  </view>
+  <view bindtap="NavChange" class="action" data-cur="about">
+    <view class='icon-cu-image'>
+      <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
+  </view>
+</view>

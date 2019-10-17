@@ -1,0 +1,101 @@
+<cu-custom class="cutab" bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">喜报</view>
+</cu-custom>
+<!-- <cu-custom class="cutab" bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">生成喜报</view>
+</cu-custom> -->
+<view class="container log-list">
+  <view style="height:10px;background:#f1f1f1;"></view>
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="icon-edit text-yellow"></text>
+      <text>动态文字编辑区</text>
+    </view>
+  </view>
+  <view style="height:1px;background:#f1f1f1;"></view>
+  <view class="shuru">
+    <view class="c-tit1 {{isFocus.a}}">
+      <text>区域：</text>
+      <input bindblur="changeInput" bindfocus="inputFocus" data-id="1" style="flex:1" value="{{title1}}" />
+    </view>
+    <view class="c-tit1 {{isFocus.b}}">
+      <text>部门：</text>
+      <input bindblur="changeInput" bindfocus="inputFocus" data-id="2" style="flex:1" value="{{title2}}" />
+    </view>
+    <view class="c-tit1 {{isFocus.c}}">
+      <text>金额：</text>
+      <input bindblur="changeInput" bindfocus="inputFocus" data-id="3" style="flex:1" value="{{money}}" />
+      <button class="project-change" bindtap="moneyJian" size="mini" type="default">减</button>
+      <button class="project-change" bindtap="moneyJia" size="mini" type="default">加</button>
+    </view>
+    <view class="c-tit1 {{isFocus.d}}">
+      <text>名字：</text>
+      <input bindfocus="inputFocus" bindblur="changeInput" data-id="4" style="flex:1" value="{{name}}" />
+      <view class="section">
+        <picker mode="selector" value="1" range="{{nameList}}" bindchange="nameChoose">
+          <button class="project-change" size="mini" type="default">选择名字</button>
+        </picker>
+      </view>
+    </view>
+    <view class="c-tit1 {{isFocus.e}}">
+      <text>动作：</text>
+      <input bindfocus="inputFocus" bindblur="changeInput" data-id="6" style="flex:1" value="{{project1}}" />
+    </view>
+    <view class="c-tit1 {{isFocus.f}}">
+      <text>项目：</text>
+      <input bindfocus="inputFocus" bindblur="changeInput" data-id="5" style="flex:1" value="{{project2}}" />
+      <button class="project-change" bindtap="projectChange" size="mini" type="default">
+        更改项目
+      </button>
+    </view>
+    <view class="c-tit1 {{isFocus.g}}">
+      <picker style="width:100%;height:40px;line-height:40px" mode="date" value="{{time}}" bindchange="bindDateChange">
+        <view class="picker">
+          <text>时间：</text>{{time}} <text style="color:#ccc;font-size:12px">(点击选择时间)</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view style="height:10px;background:#f1f1f1;"></view>
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="icon-appreciate text-pink"></text>
+      <text>成果展示区</text>
+    </view>
+  </view>
+  <view style="height:1px;background:#f1f1f1;margin-bottom:0px;"></view>
+  <image class="default-img" src="../../images/default11.jpg" bindload="imgLoaded" mode="widthFix" />
+ 
+  <view class="ca">
+    <canvas canvas-id="myCanvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px" disable-scroll="true"></canvas>
+  </view>
+  <view style="padding:20px 20px 10px">
+    <button type="primary" bindtap="save">保存到相册<text class="yyy">(摇一摇保存)</text></button>
+  </view>
+  <view wx:if="{{souquan}}" class="shouquan">
+    <view class="sq-box">
+      <button type="primary" size="mini" open-type="openSetting" bindopensetting="souquanok">保存图片请授予相册权限--打开设置页</button>
+    </view>
+  </view>
+  <view wx:if="{{isUserInfo}}" class="shouquan">
+    <view class="sq-box">
+      <button type="primary" size="mini" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">请点击授权获取您的信息</button>
+    </view>
+  </view>
+  <view class="btm-btn" style="padding:10px 20px 10px;">
+    <button size="mini" open-type="share">分享</button>
+    <button class="b2" bindtap="clearName" size="mini">清除缓存</button>
+  </view>
+  <view class="margin-tb-sm text-center" role="" aria-label="">
+    <button bindtap="shang" style="width:400rpx;margin-right:20px;" class="cu-btn round bg-brown" role="button" aria-label="" aria-disabled="false">观看视频，增加好友值</button>
+    <button bindtap="toRank" class="cu-btn round bg-brown" role="button" aria-label="" aria-disabled="false">好友值排行</button>
+  </view>
+  <view class="gei">
+    <navigator class="geizan" target="miniProgram" open-type="navigate" app-id="wx18a2ac992306a5a4" path="pages/apps/largess/detail?id=SJMKpnQsUvY%3D" extra-data="" version="release">💖 打赏作者 -- 程序维护不易，请作者喝一杯🍺</navigator>
+  </view>
+  <view class="banquan" style="margin-bottom:10px;color:#e48a2c"> </view>
+  <ad unit-id="adunit-8408d86452cc136c"></ad>
+  <view class="ad_btm banquan">联系QQ：864820562</view>
+</view>

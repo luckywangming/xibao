@@ -1,0 +1,76 @@
+<cu-custom2 class="cutab" bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{false}}">
+  <view slot="backText">返回</view>
+  <!-- <view slot="content">动态设置内容,快速生成喜报...</view> -->
+  <view slot="content">动态设置内容,快速生成喜报...</view>
+</cu-custom2>
+
+<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="{{true}}" interval="10000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item class="{{cardCur==0?'cur':''}}">
+    <view class="swiper-item">
+      <view class="cu-card">
+        <view class="tonew cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg)">
+          <view class="cardTitle main">作者新的小程序</view>
+          <view class="sign text-orange">
+            点击此处前往作者新的小程序
+            <navigator open-type="navigate" target="miniProgram" app-id="wx7596053310ffe2dd" version="release" path="pages/index/index"
+            class="to-content">
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="{{cardCur==1?'cur':''}}">
+    <view class="swiper-item">
+      <view class="cu-card">
+        <view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/qpczdh2307.jpg)">
+          <view class="cardTitle main">生成喜报</view>
+          <view class="sign text-orange">已累计生成喜报 <text style="font-size:20px" class="text-yellow text-bold">{{total}}</text>  张</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="{{cardCur==2?'cur':''}}">
+    <view class="swiper-item">
+      <view class="cu-card">
+        <view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/qpct2148.jpg)">
+          <view class="cardTitle main">获取好友值</view>
+          <view class="sign text-orange"><text style="font-size:20px" class="text-yellow text-bold">观看点击视频 </text>可获取好友值</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 525rpx)">
+    <view class="cu-item {{index==TabCur?'text-mauve cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 525rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view style="padding:20rpx 20rpx 0" class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+      <view style="min-height:70rpx;" class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='icon-title text-mauve'>{{item.name}}</text>
+        </view>
+      </view>
+      <view class="box aaa">
+        <navigator url="{{item.url}}" class="content">
+          <view style="position:relative;">
+            <image class="img-width" src="{{item.img_ex}}" mode="widthFix"></image>
+            <view class="mask {{index==0?'h_mask':''}}">
+              <text wx:for="{{item.tag}}" wx:for-item="tag" wx:key style="right:10rpx;top:{{index * 20 + 50 * index + 20}}rpx;position:absolute;" class="cu-tag bg-mauve">{{tag}}</text>
+            </view>
+          </view>
+        </navigator>
+        <view wx:if="{{index==0}}" bindtap='secritShow' class="h_mm"></view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class='cu-tabbar-height'></view>
+<view wx:if="{{isPsShow}}" class='password'>
+  <view bindtap="hideSecrit" class="hei_mask"></view>
+  <input maxlength="6" focus="true" bindinput="setSecrit" value="{{password}}" class="input" password type="text" placeholder="六位密码" />
+</view>
+
